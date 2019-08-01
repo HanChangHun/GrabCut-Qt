@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 DIR = os.getcwd()
-UIDIR = os.path.join(DIR,"grabcut.ui")
+UIDIR = os.path.join(DIR,"grabcut_qt.ui")
 
 class MainDialog(QDialog):
     def __init__(self):
