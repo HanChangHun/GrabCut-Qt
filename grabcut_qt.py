@@ -1,10 +1,10 @@
 import sys, os, cv2
 import numpy as np
+import grabcut
 import PyQt5
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-
 from PyQt5 import uic
 
 DIR = os.getcwd()
