@@ -12,7 +12,10 @@ https://github.com/ahaque/cs231b/tree/master/project1
 
 https://github.com/ahckjhckxz/grabcut-bordermatting
 
+I didn't put Border Matting in the Gui. Because Border Matting takes too much time. It's very slow maybe due to Python's computational speed problem.
+
 you can run at command line :
 
 $ python grabcut_qt.py
 
+![image](images\desc.jpg)

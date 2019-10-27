@@ -1,6 +1,6 @@
 import sys, os, cv2
 import numpy as np
-import grabcut
+import Grabcut
 import PyQt5
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -8,7 +8,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 DIR = os.getcwd()
-UIDIR = os.path.join(DIR, "grabcut_qt.ui")
+UIDIR = os.path.join(DIR, "Grabcut_Qt.ui")
 
 
 class MainDialog(QDialog):
@@ -52,11 +52,11 @@ class MainDialog(QDialog):
             self.masking_image = np.zeros_like(self.image, dtype=np.float)
 
         elif btn.text() == 'run':
-            self.segmented_image, self.masking_image = grabcut.grabcut(self.image, self.bbox_pos1, self.bbox_pos2)
+            self.segmented_image, self.masking_image = Grabcut.grabcut(self.image, self.bbox_pos1, self.bbox_pos2)
             if self.iteration_number >= 2:
                 for i in range(self.iteration_number - 1):
                     self.progressBar.setValue(int(100 * i + 2 / self.iteration_number))
-                    self.segmented_image, self.masking_image = grabcut.grabcut(self.image, [], [], self.masking_image)
+                    self.segmented_image, self.masking_image = Grabcut.grabcut(self.image, [], [], self.masking_image)
             self.progressBar.setValue(100)
             cv2.imshow('title', self.segmented_image)
             cv2.imwrite("temp_mask.jpg", self.masking_image * 255)
