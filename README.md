@@ -18,4 +18,4 @@ you can run at command line :
 
 $ python grabcut_qt.py
 
-![image](images\desc.jpg)
+![image](images/desc.jpg)
