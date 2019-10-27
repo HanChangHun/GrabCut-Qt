@@ -1,0 +1,5 @@
+# git ignore
+*.ipynb_checkpoints
+*.ipynb
+__pycache__
+temp.py
