@@ -3,3 +3,6 @@
 *.ipynb
 __pycache__
 temp.py
+.idea/*
+GrabCut-Qt.png
+.pdf

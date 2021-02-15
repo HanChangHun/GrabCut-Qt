@@ -56,7 +56,7 @@ class MainDialog(QDialog):
             if self.iteration_number >= 2:
                 for i in range(self.iteration_number - 1):
                     self.progressBar.setValue(int(100 * i + 2 / self.iteration_number))
-                    self.segmented_image, self.masking_image = Grabcut.grabcut(self.image, [], [], self.masking_image)
+                    self.segmented_image, self.masking_image = Grabcut.grabcut(self.image, None, None, self.masking_image)
             self.progressBar.setValue(100)
             cv2.imshow('title', self.segmented_image)
             cv2.imwrite("temp_mask.jpg", self.masking_image * 255)
